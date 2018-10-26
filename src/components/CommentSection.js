@@ -35,7 +35,8 @@ export class CommentSection extends Component {
     e.preventDefault();
     const comment = {
       title: this.state.title,
-      body: this.state.body
+      body: this.state.body,
+      uid: this.props.user.uid
     };
     this.props.addComments(comment);
     this.setState({
@@ -48,11 +49,15 @@ export class CommentSection extends Component {
     return _.map(this.props.comments, (comment, key) => {
       return (
         <div key={key}>
-          <h2>{comment.title}</h2>
-          <p>{comment.body}</p>
-          <button onClick={() => this.props.deleteComment(key)}>
-            Delete Comment
-          </button>
+          {this.props.user.uid === comment.uid ? (
+            <div>
+              <h2>{comment.title}</h2>
+              <p>{comment.body}</p>
+              <button onClick={() => this.props.deleteComment(key)}>
+                Delete Comment
+              </button>
+            </div>
+          ) : null}
         </div>
       );
     });
@@ -84,8 +89,9 @@ export class CommentSection extends Component {
   }
 }
 
-const mapStateToProps = (state, OwnProps) => ({
-  comments: state.comments
+const mapStateToProps = state => ({
+  comments: state.comments,
+  user: state.user
 });
 
 const mapDispatchToProps = {

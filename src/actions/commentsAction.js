@@ -1,12 +1,20 @@
-import { GET_COMMENTS } from "../actionTypes";
+import { GET_COMMENTS, COMMENTS_STATUS } from "../actionTypes";
 import { database } from "../firebase";
 
 export function getComments() {
   return dispatch => {
+    dispatch({
+      type: COMMENTS_STATUS,
+      payload: true
+    });
     database.ref("Comments").on("value", snapshot => {
       dispatch({
         type: GET_COMMENTS,
         payload: snapshot.val()
+      });
+      dispatch({
+        type: COMMENTS_STATUS,
+        payload: false
       });
     });
   };
