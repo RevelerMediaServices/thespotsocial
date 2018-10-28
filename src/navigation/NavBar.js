@@ -23,8 +23,19 @@ export class NavBar extends Component {
             <Link className="navbar-brand" to="/">
               the Spot Social
             </Link>
-            <Link className="nav-link" to="commentSection">
+            <Link
+              className="nav-item"
+              to="/commentSection"
+              style={{ padding: "10px" }}
+            >
               Comments
+            </Link>
+            <Link
+              className="nav-item"
+              to="/spotSection"
+              style={{ padding: "10px" }}
+            >
+              Spots
             </Link>
             <ul className="navbar-nav nav navbar-right">
               <li>

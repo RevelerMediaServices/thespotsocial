@@ -23,6 +23,7 @@ export class CommentSection extends Component {
 
   componentDidMount() {
     this.props.getComments();
+    console.log(this.props.comments);
   }
 
   handleChange(e) {

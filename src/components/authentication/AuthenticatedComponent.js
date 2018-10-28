@@ -6,19 +6,17 @@ import { getUser, logout } from "../../actions/userAction";
 export class AuthenticatedComponent extends Component {
   render() {
     return (
-      <ul className="">
-        <li>
-          {this.props.user ? (
-            <div>
-              <div>{this.props.children}</div>
-            </div>
-          ) : (
-            <div>
-              <Redirect className="" to="/login" />
-            </div>
-          )}
-        </li>
-      </ul>
+      <div className="">
+        {this.props.user ? (
+          <div>
+            <div>{this.props.children}</div>
+          </div>
+        ) : (
+          <div>
+            <Redirect className="" to="/login" />
+          </div>
+        )}
+      </div>
     );
   }
 }
