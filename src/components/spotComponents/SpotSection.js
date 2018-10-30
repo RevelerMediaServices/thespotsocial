@@ -3,14 +3,24 @@ import { connect } from "react-redux";
 import _ from "lodash";
 import { getSpots } from "../../actions/spotAction";
 
+import styled from "styled-components";
+
+import { SpotComponent } from "./SpotComponent";
+
+const SpotSectionWrapper = styled.div`
+  .individualSpotComponent {
+    padding-top: 1vh;
+  }
+
+  .spotHeaderSection {
+    color: green;
+    font-size: 5vh;
+  }
+`;
+
 export class SpotsSection extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      CompanyName: "",
-      Address: ""
-    };
     this.renderSpots = this.renderSpots.bind(this);
   }
 
@@ -22,18 +32,19 @@ export class SpotsSection extends Component {
   renderSpots() {
     return _.map(this.props.spots, (spot, key) => {
       return (
-        <div key={key}>
-          <div>
-            <h2>{spot.CompanyName}</h2>
-            <p>{spot.Address}</p>
-          </div>
+        <div key={key} className="individualSpotComponent">
+          <SpotComponent spot={spot} />
         </div>
       );
     });
   }
 
   render() {
-    return <div className="spotsBox">{this.renderSpots()}</div>;
+    return (
+      <SpotSectionWrapper className="spotsBox">
+        {this.renderSpots()}
+      </SpotSectionWrapper>
+    );
   }
 }
 
