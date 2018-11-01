@@ -19,7 +19,6 @@ export class SpotComponent extends Component {
   render() {
     const spot = this.props.spot;
     return (
-      <div>
         <div>
           <Button className="accordionButton" block onClick={this.toggle}>
             {spot.CompanyName}
@@ -30,7 +29,6 @@ export class SpotComponent extends Component {
             </div>
           </Collapse>
         </div>
-      </div>
     );
   }
 }

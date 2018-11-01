@@ -37,6 +37,13 @@ export class NavBar extends Component {
             >
               Spots
             </Link>
+            <Link
+              className="nav-item"
+              to="/notesSection"
+              style={{ padding: "10px" }}
+            >
+              Notes
+            </Link>
             <ul className="navbar-nav nav navbar-right">
               <li>
                 {this.props.user ? (

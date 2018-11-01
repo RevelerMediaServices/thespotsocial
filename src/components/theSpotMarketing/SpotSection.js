@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import _ from "lodash";
 import { getSpots } from "../../actions/spotAction";
 
+import { getNotes, addNotes, deleteNote } from "../../actions/notesAction";
+
 import styled from "styled-components";
 
 import { SpotComponent } from "./SpotComponent";
@@ -26,13 +28,22 @@ export class SpotsSection extends Component {
 
   componentDidMount() {
     this.props.getSpots();
+    this.props.getNotes();
   }
 
   renderSpots() {
     return _.map(this.props.spots, (spot, key) => {
       return (
         <div key={key} className="individualSpotComponent">
-          <SpotComponent spot={spot} />
+          <SpotComponent
+            getNotes={this.props.getNotes}
+            addNotes={this.props.addNotes}
+            deleteNote={this.props.deleteNote}
+            spot={spot}
+            spotID={key}
+            notes={this.props.notes}
+            user={this.props.user}
+          />
         </div>
       );
     });
@@ -49,11 +60,15 @@ export class SpotsSection extends Component {
 
 const mapStateToProps = state => ({
   spots: state.spots,
-  user: state.user
+  user: state.user,
+  notes: state.notes
 });
 
 const mapDispatchToProps = {
-  getSpots
+  getSpots,
+  getNotes,
+  addNotes,
+  deleteNote
 };
 
 export default connect(

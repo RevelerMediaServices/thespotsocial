@@ -9,6 +9,7 @@ import Login from "../components/authentication/Login";
 // Protected Routes
 import CommentSection from "../components/CommentSection";
 import SpotSection from "../components/spotComponents/SpotSection";
+import NoteSection from "../components/theSpotMarketing/SpotSection";
 
 import { getUser } from "../actions/userAction";
 import { connect } from "react-redux";
@@ -40,6 +41,11 @@ export class Main extends Component {
                   <Route
                     path="/spotSection"
                     component={SpotSection}
+                    exact={true}
+                  />
+                  <Route
+                    path="/notesSection"
+                    component={NoteSection}
                     exact={true}
                   />
                 </AuthenticatedComponent>

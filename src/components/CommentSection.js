@@ -12,7 +12,6 @@ export class CommentSection extends Component {
     super(props);
 
     this.state = {
-      spotID: "1",
       title: "",
       body: ""
     };
@@ -90,10 +89,13 @@ export class CommentSection extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  comments: state.comments,
-  user: state.user
-});
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    comments: state.comments,
+    user: state.user
+  };
+};
 
 const mapDispatchToProps = {
   getComments,
