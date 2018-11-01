@@ -2,10 +2,11 @@
   "name": "thesocialspot",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jwgavesfl.github.io/thesocialspot",
+  "homepage": "https://jwgavesfl.github.io/thespotsocial",
   "dependencies": {
     "bootstrap": "^4.1.3",
     "firebase": "^5.5.5",
+    "gh-pages": "^2.0.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-firebase": "^2.2.8",
