@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/thesocialspot/precache-manifest.0e3ad630d219fc20640bfe73eb85658c.js"
+  "/thespotsocial/precache-manifest.d2971e50b32de56363baf2fe6b4cfc0d.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/thesocialspot/index.html", {
+workbox.routing.registerNavigationRoute("/thespotsocial/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
