@@ -25,13 +25,6 @@ export class NavBar extends Component {
             </Link>
             <Link
               className="nav-item"
-              to="/commentSection"
-              style={{ padding: "10px" }}
-            >
-              Comments
-            </Link>
-            <Link
-              className="nav-item"
               to="/spotSection"
               style={{ padding: "10px" }}
             >
