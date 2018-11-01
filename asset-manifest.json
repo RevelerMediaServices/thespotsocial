@@ -1,13 +1,13 @@
 {
-  "main.js": "/thespotsocial/static/js/main.d04f09fa.chunk.js",
-  "main.js.map": "/thespotsocial/static/js/main.d04f09fa.chunk.js.map",
-  "static/css/1.9cfaa699.chunk.css": "/thespotsocial/static/css/1.9cfaa699.chunk.css",
-  "static/js/1.24fedbd0.chunk.js": "/thespotsocial/static/js/1.24fedbd0.chunk.js",
-  "static/js/1.24fedbd0.chunk.js.map": "/thespotsocial/static/js/1.24fedbd0.chunk.js.map",
-  "runtime~main.js": "/thespotsocial/static/js/runtime~main.c63753d4.js",
-  "runtime~main.js.map": "/thespotsocial/static/js/runtime~main.c63753d4.js.map",
-  "static/css/1.9cfaa699.chunk.css.map": "/thespotsocial/static/css/1.9cfaa699.chunk.css.map",
-  "index.html": "/thespotsocial/index.html",
-  "precache-manifest.bd4f053533ccf2cbdc27048bb9ade614.js": "/thespotsocial/precache-manifest.bd4f053533ccf2cbdc27048bb9ade614.js",
-  "service-worker.js": "/thespotsocial/service-worker.js"
+  "main.js": "/thesocialspot/static/js/main.1354460d.chunk.js",
+  "main.js.map": "/thesocialspot/static/js/main.1354460d.chunk.js.map",
+  "static/css/1.9cfaa699.chunk.css": "/thesocialspot/static/css/1.9cfaa699.chunk.css",
+  "static/js/1.867586be.chunk.js": "/thesocialspot/static/js/1.867586be.chunk.js",
+  "static/js/1.867586be.chunk.js.map": "/thesocialspot/static/js/1.867586be.chunk.js.map",
+  "runtime~main.js": "/thesocialspot/static/js/runtime~main.1cf41386.js",
+  "runtime~main.js.map": "/thesocialspot/static/js/runtime~main.1cf41386.js.map",
+  "static/css/1.9cfaa699.chunk.css.map": "/thesocialspot/static/css/1.9cfaa699.chunk.css.map",
+  "index.html": "/thesocialspot/index.html",
+  "precache-manifest.0e3ad630d219fc20640bfe73eb85658c.js": "/thesocialspot/precache-manifest.0e3ad630d219fc20640bfe73eb85658c.js",
+  "service-worker.js": "/thesocialspot/service-worker.js"
 }
