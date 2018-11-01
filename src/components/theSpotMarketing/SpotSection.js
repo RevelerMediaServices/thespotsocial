@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import _ from "lodash";
-import { getSpots } from "../../actions/spotAction";
+import { Container } from "reactstrap";
 
+import { getSpots } from "../../actions/spotAction";
 import { getNotes, addNotes, deleteNote } from "../../actions/notesAction";
 
 import styled from "styled-components";
@@ -17,6 +18,20 @@ const SpotSectionWrapper = styled.div`
   .spotHeaderSection {
     color: green;
     font-size: 5vh;
+  }
+
+  #accordionButton {
+    font-size: 3.5vw;
+    font-family: "Fjalla One", sans-serif;
+  }
+
+  td {
+    font-size: 2.8vw;
+    font-family: "Noto Sans", sans-serif;
+  }
+
+  .noteInputs {
+    font-size: 50%;
   }
 `;
 
@@ -34,7 +49,7 @@ export class SpotsSection extends Component {
   renderSpots() {
     return _.map(this.props.spots, (spot, key) => {
       return (
-        <div key={key} className="individualSpotComponent">
+        <Container key={key} className="individualSpotComponent">
           <SpotComponent
             getNotes={this.props.getNotes}
             addNotes={this.props.addNotes}
@@ -44,7 +59,7 @@ export class SpotsSection extends Component {
             notes={this.props.notes}
             user={this.props.user}
           />
-        </div>
+        </Container>
       );
     });
   }
