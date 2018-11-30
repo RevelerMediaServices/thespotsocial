@@ -5,6 +5,8 @@ import { getSpots } from "../../actions/spotAction";
 
 import styled from "styled-components";
 
+import { Container } from "reactstrap";
+
 import { SpotComponent } from "./SpotComponent";
 
 const SpotSectionWrapper = styled.div`
@@ -15,6 +17,49 @@ const SpotSectionWrapper = styled.div`
   .spotHeaderSection {
     color: green;
     font-size: 5vh;
+  }
+
+  #accordionButtonSpotComponent {
+    font-size: 3.5vw;
+    font-family: "Fjalla One", sans-serif;
+  }
+
+  #spotRow {
+    border-bottom: 2px solid black;
+    margin: 2%;
+    height: 18vh;
+  }
+
+  .spotCol {
+  }
+
+  #headerImgContainer {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+  }
+
+  #spotCol1 {
+    img {
+      width: 100%;
+    }
+  }
+
+  #headerCompany {
+    font-size: 3vw;
+    font-weight: 800;
+    font-family: "Fjalla One", sans-serif;
+    text-align: center;
+  }
+
+  #headerDescription {
+    font-size: 2.5vw;
+    font-family: "Noto Sans", sans-serif;
+    padding: 1vh;
+    text-align: justify;
+  }
+
+  #spotCol2 {
   }
 `;
 
@@ -41,7 +86,7 @@ export class SpotsSection extends Component {
   render() {
     return (
       <SpotSectionWrapper className="spotsBox">
-        {this.renderSpots()}
+        <Container>{this.renderSpots()}</Container>
       </SpotSectionWrapper>
     );
   }

@@ -19,3 +19,7 @@ export function getSpots() {
     });
   };
 }
+
+export function addSpot(spot) {
+  return dispatch => database.ref("spots").push(spot);
+}

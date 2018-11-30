@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Button, Collapse } from "reactstrap";
+import { Row, Col, Collapse } from "reactstrap";
 
 export class SpotComponent extends Component {
   constructor(props) {
@@ -19,16 +19,30 @@ export class SpotComponent extends Component {
   render() {
     const spot = this.props.spot;
     return (
-        <div>
-          <Button className="accordionButton" block onClick={this.toggle}>
-            {spot.CompanyName}
-          </Button>
-          <Collapse isOpen={this.state.collapse}>
-            <div className="spotHeaderSection">
-              {spot.PhoneNumberCombined} {spot.Address}
-            </div>
-          </Collapse>
+      <div>
+        <div
+          color="primary"
+          id="accordionButtonSpotComponent"
+          onClick={this.toggle}
+        >
+          <Row id="spotRow">
+            <Col xs={4} className="spotCol" id="spotCol1">
+              <div id="headerImgContainer">
+                <img src={spot.profilePicture} alt="Company Profile" />
+              </div>
+            </Col>
+            <Col xs={8} className="spotCol" id="spotCol2">
+              <div id="headerCompany">{spot.CompanyName}</div>
+              <div id="headerDescription">{spot.description}</div>
+            </Col>
+          </Row>
         </div>
+        <Collapse isOpen={this.state.collapse}>
+          <div className="spotHeaderSection">
+            {spot.PhoneNumberCombined} {spot.Address}
+          </div>
+        </Collapse>
+      </div>
     );
   }
 }
